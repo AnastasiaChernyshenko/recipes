@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Search_Recipes/Pods-Search_Recipes-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework
+${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework

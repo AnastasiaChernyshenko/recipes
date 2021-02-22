@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Collection View Controller-->
+        <scene sceneID="mxR-6N-Miu">
+            <objects>
+                <collectionViewController storyboardIdentifier="SearchViewController" id="1Iw-Nt-Q4m" customClass="SearchCollectionViewController" customModule="Search_Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pnf-kQ-qVf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lwa-UR-2eb">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeCollectionViewCell" id="ADv-7r-mzO" customClass="RecipeCollectionViewCell" customModule="Search_Recipes" customModuleProvider="target">
+                                <rect key="frame" x="80" y="0.0" width="254" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Dup-Cs-YUf">
+                                    <rect key="frame" x="0.0" y="0.0" width="254" height="227"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaghetti-puttanesca_1-1ce4e81" translatesAutoresizingMaskIntoConstraints="NO" id="KhO-Cr-odP">
+                                            <rect key="frame" x="0.0" y="0.0" width="254" height="227"/>
+                                        </imageView>
+                                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sd1-fh-dKk">
+                                            <rect key="frame" x="0.0" y="159" width="254" height="68"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roasted Chiken  " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMi-Ef-Qyp">
+                                            <rect key="frame" x="5" y="159" width="244" height="68"/>
+                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="sd1-fh-dKk" secondAttribute="trailing" id="11N-c9-0Jl"/>
+                                        <constraint firstItem="sd1-fh-dKk" firstAttribute="leading" secondItem="Dup-Cs-YUf" secondAttribute="leading" id="CiK-2o-pQl"/>
+                                        <constraint firstItem="KhO-Cr-odP" firstAttribute="leading" secondItem="Dup-Cs-YUf" secondAttribute="leading" id="CzE-eg-TsQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="RMi-Ef-Qyp" secondAttribute="trailing" constant="5" id="J6y-Cl-ltA"/>
+                                        <constraint firstItem="KhO-Cr-odP" firstAttribute="top" secondItem="Dup-Cs-YUf" secondAttribute="top" id="LrU-F5-8ie"/>
+                                        <constraint firstAttribute="bottom" secondItem="KhO-Cr-odP" secondAttribute="bottom" id="N1E-Wk-jjo"/>
+                                        <constraint firstAttribute="bottom" secondItem="sd1-fh-dKk" secondAttribute="bottom" id="Va7-2Z-G46"/>
+                                        <constraint firstAttribute="trailing" secondItem="KhO-Cr-odP" secondAttribute="trailing" id="Wo8-qN-1aT"/>
+                                        <constraint firstItem="sd1-fh-dKk" firstAttribute="height" secondItem="Dup-Cs-YUf" secondAttribute="height" multiplier="0.3" id="agi-TQ-pjR"/>
+                                        <constraint firstItem="RMi-Ef-Qyp" firstAttribute="height" secondItem="sd1-fh-dKk" secondAttribute="height" id="ba1-1Q-3pU"/>
+                                        <constraint firstAttribute="bottom" secondItem="RMi-Ef-Qyp" secondAttribute="bottom" id="nxZ-Qc-4xD"/>
+                                        <constraint firstItem="RMi-Ef-Qyp" firstAttribute="leading" secondItem="Dup-Cs-YUf" secondAttribute="leading" constant="5" id="oV0-a2-KOJ"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="254" height="227"/>
+                                <connections>
+                                    <outlet property="blurView" destination="sd1-fh-dKk" id="7mE-g8-JEQ"/>
+                                    <outlet property="recipeImage" destination="KhO-Cr-odP" id="5xU-y6-176"/>
+                                    <outlet property="recipeLabel" destination="RMi-Ef-Qyp" id="VXq-8O-1O2"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="1Iw-Nt-Q4m" id="clL-wh-HLG"/>
+                            <outlet property="delegate" destination="1Iw-Nt-Q4m" id="AMb-Fa-2y1"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBb-ew-gL0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="40.848214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="spaghetti-puttanesca_1-1ce4e81" width="440" height="400"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

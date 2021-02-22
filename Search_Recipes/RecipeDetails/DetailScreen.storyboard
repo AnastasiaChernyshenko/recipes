@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details View Controller-->
+        <scene sceneID="jCx-GJ-Zo0">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="GQ7-Ml-0Xn" customClass="DetailsViewController" customModule="Search_Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DII-vN-38A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="uRS-BM-9Mb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeImage" rowHeight="327" id="ZVJ-51-SNt" customClass="RecipeImageTableViewCell" customModule="Search_Recipes" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.5" width="374" height="327"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZVJ-51-SNt" id="wAg-J6-2li">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="327"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaghetti-puttanesca_1-1ce4e81" translatesAutoresizingMaskIntoConstraints="NO" id="cMY-fv-jjc">
+                                                    <rect key="frame" x="20" y="16" width="334" height="291"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cMY-fv-jjc" firstAttribute="top" secondItem="wAg-J6-2li" secondAttribute="topMargin" constant="5" id="6RC-0x-kjN"/>
+                                                <constraint firstAttribute="bottom" secondItem="cMY-fv-jjc" secondAttribute="bottom" constant="20" id="LjM-L1-FQ8"/>
+                                                <constraint firstItem="cMY-fv-jjc" firstAttribute="leading" secondItem="wAg-J6-2li" secondAttribute="leadingMargin" id="Zjg-2F-79v"/>
+                                                <constraint firstAttribute="trailing" secondItem="cMY-fv-jjc" secondAttribute="trailing" constant="20" id="eXU-n7-Lxv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recipeImageView" destination="cMY-fv-jjc" id="7le-DD-XEG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCell" textLabel="fEr-QB-K5w" style="IBUITableViewCellStyleDefault" id="b9Z-gr-klf">
+                                        <rect key="frame" x="20" y="382.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b9Z-gr-klf" id="hNQ-P3-mPj">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fEr-QB-K5w">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aoM-LV-0AV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aoM-LV-0AV" firstAttribute="trailing" secondItem="uRS-BM-9Mb" secondAttribute="trailing" id="BYu-WT-k1e"/>
+                            <constraint firstItem="uRS-BM-9Mb" firstAttribute="leading" secondItem="aoM-LV-0AV" secondAttribute="leading" id="E7W-cb-moS"/>
+                            <constraint firstItem="uRS-BM-9Mb" firstAttribute="top" secondItem="aoM-LV-0AV" secondAttribute="top" id="ST5-cc-pZZ"/>
+                            <constraint firstAttribute="bottom" secondItem="uRS-BM-9Mb" secondAttribute="bottom" id="YeO-Wt-nR5"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="uRS-BM-9Mb" id="TQk-OY-GeM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qjC-Sl-ABQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="16.741071428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="spaghetti-puttanesca_1-1ce4e81" width="440" height="400"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
